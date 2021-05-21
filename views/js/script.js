@@ -198,7 +198,5 @@ function findaverage(dataObject){
     var count = dataObject.count;
     var average = value/count;
 
-    console.log(dataObject)
-
     return average;
 }
