@@ -1,6 +1,8 @@
 const express = require('express');
 const app = express();
 const path  = require('path')
+const http = require('http').createServer(app)
+const port = process.env.PORT || 8000;
 
 app.use(express.static(path.join(__dirname ,'views')));
 
@@ -28,4 +30,4 @@ app.use('*', (req,res) => {
   res.render('404')
 })
 
-app.listen(5000, console.log(`Server running on  5000`));
+app.listen(port, console.log(`Server running on  5000`));
