@@ -42,6 +42,7 @@ body {
     height: 5%;
     width: auto;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-evenly;
 }
 
@@ -51,7 +52,6 @@ body {
 }
 
 .navbar {
-    z-index: 1;
     top: 0;
     width: 100%;
     background-color: lightcyan;
@@ -83,4 +83,22 @@ body {
     width: 100%;
 }
 
-
+@media (orientation: portrait) {
+    .navbar{
+        height: 10vh;
+    }
+    .logo a{
+        font-size: 4vw;
+    }
+    .navbar-buttons a{
+        font-size: 4vw;
+    }
+    .navbar-buttons button{
+        font-size: 4vw;
+    }
+    .buttons button{
+        font-size: 5vw;
+        width: 27vw;
+        margin-bottom: 25px;
+    }
+}

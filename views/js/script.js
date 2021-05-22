@@ -1,3 +1,7 @@
+if(window.innerHeight > window.innerWidth){
+    alert("Please use Landscape mode for best experience");
+}
+
 const canvas = document.getElementById('chart');
 var ctx = canvas.getContext('2d');
 
@@ -60,6 +64,15 @@ function showdata(event) {
     var button_id = event.target.id;
     var dataset = [], labels = [];
     var LineColor,data; 
+
+    if(window.innerHeight > window.innerWidth){
+        var databuttons = document.querySelectorAll('.databutton');
+        for(let x = 0; x< databuttons.length; x++){
+            databuttons[x].style.fontSize =  '2vw';
+            databuttons[x].style.width = '10vw';
+            databuttons[x].style.marginBottom = 'none';
+        }
+    }
 
     if(button_id == 'button-Bp'){
         var dataset2 = [];

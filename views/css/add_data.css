@@ -56,3 +56,26 @@ body {
     background-color: white;
     margin-right: 3px;
 }
+
+
+@media (orientation: portrait) {
+    .navbar{
+        height: 10vh;
+    }
+    .logo a{
+        font-size: 4vw;
+    }
+    .navbar-buttons a{
+        font-size: 4vw;
+    }
+    .add_data input{
+        font-size: 4vw;
+        width: 27vw;
+        margin-bottom: 25px;
+    }
+    .add_data button{
+        font-size: 5vw;
+        width: 27vw;
+        margin-bottom: 25px;
+    }
+}
