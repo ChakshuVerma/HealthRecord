@@ -30,4 +30,4 @@ app.use('*', (req,res) => {
   res.render('404')
 })
 
-app.listen(port, console.log(`Server running on  5000`));
+app.listen(port, console.log(`Server running on ` + port));
