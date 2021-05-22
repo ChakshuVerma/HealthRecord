@@ -31,7 +31,8 @@ body {
 }
 
 .canvas-container{
-    width: 90%;
+    position: relative;
+    width: 100%;
     height: auto;    
     display: none;
 }
@@ -49,6 +50,7 @@ body {
 }
 
 .navbar {
+    z-index: 1;
     top: 0;
     width: 100%;
     background-color: lightcyan;

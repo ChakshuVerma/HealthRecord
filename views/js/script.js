@@ -23,6 +23,7 @@ setchartsettings = (data) => {
         data: data, 
         options: {
             responsive: true,
+            maintainAspectRatio: true,
             scales: {
                 x: {
                     title: {
