@@ -23,12 +23,12 @@ function adddata(event) {
         },2000)
     }
     else{
-        if((SysBP < 90 || SysBP > 150 && SysBP != NaN) || (DiaBP < 60 || DiaBP > 110 && DiaBP != NaN) || (Pulse < 40 || Pulse > 110 && Pulse != NaN) || (SPO2 < 92 || SPO2 > 102 && SPO2 != NaN)){
+        if((SysBP < 90 || SysBP > 150 && SysBP != NaN) || (DiaBP < 60 || DiaBP > 110 && DiaBP != NaN) || (Pulse < 40 || Pulse > 110 && Pulse != NaN) || (SPO2 < 92 || SPO2 > 100 && SPO2 != NaN)){
+            msg.className = 'alert alert-danger'
             msg.innerHTML = 'Your Readings Are Extreme. You Should Visit A Hospital Immediately'
         }
         else{
             msg.innerHTML = 'Readings Added'
-            msg.className = 'alert alert-success'
         }
     
         var today = new Date();
@@ -41,8 +41,10 @@ function adddata(event) {
         addToLocalStorage(obj, today);
         msg.style.display = 'block'
         
-        setTimeout(() => location.reload()
-        ,2000)
+        document.getElementById('BP-1').value = ''
+        document.getElementById('BP-2').value = ''
+        document.getElementById('Pulse').value = ''
+        document.getElementById('SPO2').value = ''
     }
 }
 

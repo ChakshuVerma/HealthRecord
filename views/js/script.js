@@ -11,7 +11,6 @@ setchartdata = (dataset,LineColor,label) =>{
             label: label,
             data: dataset,
             fill: false,
-            borderColor: LineColor,
             backgroundColor: LineColor,
             tension: 0.1,
         }
@@ -25,18 +24,16 @@ setchartsettings = (data) => {
         type: 'line',
         data: data, 
         options: {
-            responsive: true,
-            maintainAspectRatio: true,
             legend:{
                 display: true,
-                position: "right",
-                align: "middle",
-                label: {
-                    usePointStyle: true,
-                    fontSize: 30,
-                    fontColor: 'rgb(255, 99, 132)'
+                labels: {
+                  usePointStyle: true,
+                  position: "right",
+                    align: "middle"
                 }
             },
+            responsive: true,
+            maintainAspectRatio: true,
             scales: {
                 x: {
                     title: {
@@ -88,7 +85,7 @@ function showdata(event) {
         var dataset2 = [];
         var label2, LineColor2;
 
-        for (var i = 0; i < localStorage.length; i++){
+        for (var i = localStorage.length-1; i >= 0; i--){
             labels.push(localStorage.key(i))
             var jsonString = localStorage.getItem(localStorage.key(i));
             var retrievedObject = JSON.parse(jsonString);
@@ -111,7 +108,7 @@ function showdata(event) {
         }
     }
     else if(button_id == 'button-SPO2'){
-        for (var i = 0; i < localStorage.length; i++){
+        for (var i = localStorage.length-1; i >= 0; i--){
             labels.push(localStorage.key(i))
             var jsonString = localStorage.getItem(localStorage.key(i));
             var retrievedObject = JSON.parse(jsonString);
@@ -128,7 +125,7 @@ function showdata(event) {
         }
     }
     else if(button_id == 'button-Pulse'){
-        for (var i = 0; i < localStorage.length; i++){
+        for (var i = localStorage.length-1; i >= 0; i--){
             labels.push(localStorage.key(i))
             var jsonString = localStorage.getItem(localStorage.key(i));
             var retrievedObject = JSON.parse(jsonString);
@@ -147,7 +144,7 @@ function showdata(event) {
     else{
         var dataset2 = [], dataset3 = [], dataset4 = [];
 
-        for (var i = 0; i < localStorage.length; i++){
+        for (var i = localStorage.length-1; i >= 0; i--){
             labels.push(localStorage.key(i))
             var jsonString = localStorage.getItem(localStorage.key(i));
             var retrievedObject = JSON.parse(jsonString);
