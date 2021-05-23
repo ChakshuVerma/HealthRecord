@@ -11,7 +11,7 @@ setchartdata = (dataset,LineColor,label) =>{
             label: label,
             data: dataset,
             fill: false,
-            borderColor: LineColor,
+            backgroundColor: LineColor,
             tension: 0.1,
         }
     return data;
