@@ -1,9 +1,7 @@
-if(window.innerHeight > window.innerWidth){
-    alert("Please use Landscape mode for best experience");
-}
-
 const canvas = document.getElementById('chart');
 var ctx = canvas.getContext('2d');
+canvas.width  = canvas.offsetWidth;
+canvas.height = canvas.offsetHeight;
 
 var myChart;
 
@@ -26,11 +24,16 @@ setchartsettings = (data) => {
         type: 'line',
         data: data, 
         options: {
+            label: {
+                position: "right",
+                align: "middle"
+            },
             responsive: true,
             maintainAspectRatio: true,
             scales: {
                 x: {
                     title: {
+                        fontSize: '20',
                         text: 'Date',
                         color: 'Black',
                         display: true,

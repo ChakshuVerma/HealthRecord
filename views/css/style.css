@@ -33,7 +33,7 @@ body {
 
 .canvas-container{
     position: relative;
-    width: 100%;
+    width: 95%;
     height: auto;    
     display: none;
     align-items: center;
@@ -49,6 +49,7 @@ body {
 }
 
 .buttons button {
+    font-size: 2vw;
     background-color: white;
     margin-right: 30px;
 }
@@ -105,6 +106,9 @@ body {
         margin-bottom: 25px;
     }
     .canvas-container{
-        min-height: 65vh;
+        height: 60vh;
+    }
+    #msg {
+        font-size: 5vw;
     }
 }

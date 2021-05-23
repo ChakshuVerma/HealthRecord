@@ -78,4 +78,7 @@ body {
         width: 27vw;
         margin-bottom: 25px;
     }
+    #msg {
+        font-size: 5vw;
+    }
 }
