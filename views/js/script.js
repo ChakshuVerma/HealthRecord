@@ -11,6 +11,7 @@ setchartdata = (dataset,LineColor,label) =>{
             label: label,
             data: dataset,
             fill: false,
+            borderColor: LineColor,
             backgroundColor: LineColor,
             tension: 0.1,
         }
@@ -24,12 +25,18 @@ setchartsettings = (data) => {
         type: 'line',
         data: data, 
         options: {
-            label: {
-                position: "right",
-                align: "middle"
-            },
             responsive: true,
             maintainAspectRatio: true,
+            legend:{
+                display: true,
+                position: "right",
+                align: "middle",
+                label: {
+                    usePointStyle: true,
+                    fontSize: 30,
+                    fontColor: 'rgb(255, 99, 132)'
+                }
+            },
             scales: {
                 x: {
                     title: {
@@ -60,6 +67,7 @@ setchartsettings = (data) => {
               
         }
     })
+
 }
 
 
