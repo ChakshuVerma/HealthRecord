@@ -68,9 +68,8 @@ function showdata(event) {
     if(window.innerHeight > window.innerWidth){
         var databuttons = document.querySelectorAll('.databutton');
         for(let x = 0; x< databuttons.length; x++){
-            databuttons[x].style.fontSize =  '2vw';
-            databuttons[x].style.width = '10vw';
-            databuttons[x].style.marginBottom = 'none';
+            databuttons[x].style.fontSize =  '4vw';
+            databuttons[x].style.width = '35vw';
         }
     }
 
@@ -167,7 +166,7 @@ function showdata(event) {
     if(myChart !== undefined)
         myChart.destroy();
     
-    document.querySelector('.canvas-container').style.display = 'block';
+    document.querySelector('.canvas-container').style.display = 'flex';
     setchartsettings(data);
     myChart.update();
 }
