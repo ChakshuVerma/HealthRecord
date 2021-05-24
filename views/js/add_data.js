@@ -23,24 +23,25 @@ function adddata(event) {
         },2000)
     }
     else{
-        if((SysBP < 90 || SysBP > 150 && SysBP != NaN) || (DiaBP < 60 || DiaBP > 110 && DiaBP != NaN) || (Pulse < 40 || Pulse > 110 && Pulse != NaN) || (SPO2 < 92 || SPO2 > 100 && SPO2 != NaN)){
+        if((SysBP<90 || SysBP>150 && SysBP!=NaN) || (DiaBP<60 || DiaBP>110 && DiaBP!=NaN) || (Pulse<40 || Pulse>110 && Pulse!=NaN) || (SPO2<92 || SPO2>100 && SPO2!=NaN)){
             msg.className = 'alert alert-danger'
             msg.innerHTML = 'Your Readings Are Extreme. You Should Visit A Hospital Immediately'
+            msg.style.display = 'block'
         }
         else{
-            msg.innerHTML = 'Readings Added'
-        }
-    
-        var today = new Date();
-        var dd = String(today.getDate()).padStart(2, '0');
-        var mm = String(today.getMonth() + 1).padStart(2, '0');
-        today = String(dd) + '/' + String(mm);
-    
-        var obj = returnDataObject(SysBP,DiaBP,Pulse,SPO2,today);
-    
-        addToLocalStorage(obj, today);
-        msg.style.display = 'block'
+            var today = new Date();
+            var dd = String(today.getDate()).padStart(2, '0');
+            var mm = String(today.getMonth() + 1).padStart(2, '0');
+            today = String(dd) + '/' + String(mm);
         
+            var obj = returnDataObject(SysBP,DiaBP,Pulse,SPO2,today);
+        
+            addToLocalStorage(obj, today);
+        
+            msg.className = 'alert alert-success'
+            msg.innerHTML = 'Readings Added'
+            msg.style.display = 'block'
+        }
         document.getElementById('BP-1').value = ''
         document.getElementById('BP-2').value = ''
         document.getElementById('Pulse').value = ''

@@ -12,8 +12,7 @@ setchartdata = (dataset,LineColor,label) =>{
             data: dataset,
             fill: false,
             borderColor: LineColor,
-            backgroundColor: LineColor,
-            tension: 0.1,
+            backgroundColor: LineColor
         }
     return data;
 }
@@ -59,7 +58,8 @@ setchartsettings = (data) => {
                     hoverRadius: 10
                 },
                 line: {
-                    borderWidth: 2
+                    borderWidth: 2,
+                    tension: 0.1
                 }
             }
               
@@ -86,7 +86,7 @@ function showdata(event) {
         var dataset2 = [];
         var label2, LineColor2;
 
-        for (var i = localStorage.length-1; i >= 0; i--){
+        for (var i = 0; i < localStorage.length; i++){
             labels.push(localStorage.key(i))
             var jsonString = localStorage.getItem(localStorage.key(i));
             var retrievedObject = JSON.parse(jsonString);
@@ -109,7 +109,7 @@ function showdata(event) {
         }
     }
     else if(button_id == 'button-SPO2'){
-        for (var i = localStorage.length-1; i >= 0; i--){
+        for (var i = 0; i < localStorage.length; i++){
             labels.push(localStorage.key(i))
             var jsonString = localStorage.getItem(localStorage.key(i));
             var retrievedObject = JSON.parse(jsonString);
@@ -126,7 +126,7 @@ function showdata(event) {
         }
     }
     else if(button_id == 'button-Pulse'){
-        for (var i = localStorage.length-1; i >= 0; i--){
+        for (var i = 0; i < localStorage.length; i++){
             labels.push(localStorage.key(i))
             var jsonString = localStorage.getItem(localStorage.key(i));
             var retrievedObject = JSON.parse(jsonString);
@@ -145,7 +145,7 @@ function showdata(event) {
     else{
         var dataset2 = [], dataset3 = [], dataset4 = [];
 
-        for (var i = localStorage.length-1; i >= 0; i--){
+        for (var i = 0; i < localStorage.length; i++){
             labels.push(localStorage.key(i))
             var jsonString = localStorage.getItem(localStorage.key(i));
             var retrievedObject = JSON.parse(jsonString);

@@ -24,6 +24,7 @@ body {
     display: none;
     top: 15vh;
     position: fixed;
+    z-index: 1;
 }
 
 .logo a{
@@ -70,7 +71,7 @@ body {
         font-size: x-large;
     }
     .navbar-buttons a{
-        font-size: 4vw;
+        font-size: 5vw;
     }
     .add_data input{
         font-size: 4vw;
@@ -78,6 +79,7 @@ body {
         margin-bottom: 25px;
     }
     .add_data button{
+        margin-top: 4vh;
         font-size: 5vw;
         width: 27vw;
         margin-bottom: 25px;
