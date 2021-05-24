@@ -24,12 +24,13 @@ setchartsettings = (data) => {
         type: 'line',
         data: data, 
         options: {
-            legend:{
-                display: true,
-                labels: {
-                  usePointStyle: true,
-                  position: "right",
-                    align: "middle"
+            plugins: {
+                legend:{
+                    display: true,
+                    align: "middle",
+                    labels: {
+                        usePointStyle: true,
+                    }
                 }
             },
             responsive: true,
@@ -37,18 +38,24 @@ setchartsettings = (data) => {
             scales: {
                 x: {
                     title: {
-                        fontSize: '20',
                         text: 'Date',
                         color: 'Black',
                         display: true,
+                        font: {
+                            size: 20
+                        }
                     }
                 },
                 y: {
                     title: {
-                        text: 'Value',
+                        text: 'Reading',
                         color: 'Black',
                         display: true,
-                    }
+                        font: {
+                            size: 20
+                        }
+                    },
+                    suggestedMin: 0,
                 }
             },
             elements: {
@@ -59,7 +66,8 @@ setchartsettings = (data) => {
                 },
                 line: {
                     borderWidth: 2,
-                    tension: 0.1
+                    tension: 0.1,
+                    spanGaps: true
                 }
             }
               
@@ -86,15 +94,16 @@ function showdata(event) {
         var dataset2 = [];
         var label2, LineColor2;
 
-        for (var i = 0; i < localStorage.length; i++){
-            labels.push(localStorage.key(i))
-            var jsonString = localStorage.getItem(localStorage.key(i));
+        Object.keys(localStorage).forEach(function(key){
+            labels.push(key)
+            var jsonString = localStorage.getItem(key);
             var retrievedObject = JSON.parse(jsonString);
             var SysBP = findaverage(retrievedObject.SysBP);
             dataset.push(SysBP);
             var DiaBP = findaverage(retrievedObject.DiaBP);
             dataset2.push(DiaBP);
-        }
+         });
+
         var label = 'Systolic BP'
         label2 = 'Diastolic BP'
         LineColor = 'blue'
@@ -109,13 +118,13 @@ function showdata(event) {
         }
     }
     else if(button_id == 'button-SPO2'){
-        for (var i = 0; i < localStorage.length; i++){
-            labels.push(localStorage.key(i))
-            var jsonString = localStorage.getItem(localStorage.key(i));
+        Object.keys(localStorage).forEach(function(key){
+            labels.push(key)
+            var jsonString = localStorage.getItem(key);
             var retrievedObject = JSON.parse(jsonString);
             var SPO2 = findaverage(retrievedObject.SPO2);
             dataset.push(SPO2);
-        }
+        });
         var label = 'SPO2'
         LineColor = 'orange'
 
@@ -126,13 +135,13 @@ function showdata(event) {
         }
     }
     else if(button_id == 'button-Pulse'){
-        for (var i = 0; i < localStorage.length; i++){
-            labels.push(localStorage.key(i))
-            var jsonString = localStorage.getItem(localStorage.key(i));
+        Object.keys(localStorage).forEach(function(key){
+            labels.push(key)
+            var jsonString = localStorage.getItem(key);
             var retrievedObject = JSON.parse(jsonString);
             var Pulse = findaverage(retrievedObject.Pulse);
             dataset.push(Pulse);
-        }
+        });
         var label = 'Pulse'
         LineColor = 'green'
 
@@ -144,10 +153,9 @@ function showdata(event) {
     }
     else{
         var dataset2 = [], dataset3 = [], dataset4 = [];
-
-        for (var i = 0; i < localStorage.length; i++){
-            labels.push(localStorage.key(i))
-            var jsonString = localStorage.getItem(localStorage.key(i));
+        Object.keys(localStorage).forEach(function(key){
+            labels.push(key)
+            var jsonString = localStorage.getItem(key);
             var retrievedObject = JSON.parse(jsonString);
             var SysBP = findaverage(retrievedObject.SysBP);
             var DiaBP = findaverage(retrievedObject.DiaBP);
@@ -157,7 +165,7 @@ function showdata(event) {
             dataset2.push(DiaBP);
             dataset3.push(SPO2);
             dataset4.push(Pulse);
-        }
+        });
         var label1 = 'Diastolic BP', label2 = 'Systolic BP', label3 = 'SPO2', label4 = 'Pulse';
         var LineColor1 = 'blue', LineColor2 = 'red', LineColor3 = 'orange', LineColor4 = 'green';
 

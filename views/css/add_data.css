@@ -57,7 +57,7 @@ body {
     justify-content: space-around;
 }
 
-.navbar-buttons a {
+.navbar-buttons a{
     background-color: white;
     margin-right: 3px;
 }
@@ -71,7 +71,10 @@ body {
         font-size: x-large;
     }
     .navbar-buttons a{
-        font-size: 5vw;
+        font-size: 3vw;
+    }
+    .navbar-buttons button{
+        font-size: 3vw;
     }
     .add_data input{
         font-size: 4vw;

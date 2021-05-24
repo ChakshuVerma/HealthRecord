@@ -23,7 +23,7 @@ function adddata(event) {
         },2000)
     }
     else{
-        if((SysBP<90 || SysBP>150 && SysBP!=NaN) || (DiaBP<60 || DiaBP>110 && DiaBP!=NaN) || (Pulse<40 || Pulse>110 && Pulse!=NaN) || (SPO2<92 || SPO2>100 && SPO2!=NaN)){
+        if(((SysBP<90 || SysBP>150) && SysBP!=NaN) || ((DiaBP<60 || DiaBP>110)&& DiaBP!=NaN) || ((Pulse<40 || Pulse>110) && Pulse!=NaN) || ((SPO2<92 || SPO2>100) && SPO2!=NaN)){
             msg.className = 'alert alert-danger'
             msg.innerHTML = 'Your Readings Are Extreme. You Should Visit A Hospital Immediately'
             msg.style.display = 'block'
@@ -42,6 +42,9 @@ function adddata(event) {
             msg.innerHTML = 'Readings Added'
             msg.style.display = 'block'
         }
+        setTimeout(() => {
+            msg.style.display = 'none'
+        },2000)
         document.getElementById('BP-1').value = ''
         document.getElementById('BP-2').value = ''
         document.getElementById('Pulse').value = ''
@@ -57,11 +60,21 @@ function addToLocalStorage(data, today) {
 
 function returnDataObject(SysBP,DiaBP,Pulse,SPO2,today) {
     if (localStorage.getItem(today) === null) {
-        var obj = {
-            SysBP: {value: SysBP, count:1},
-            DiaBP: {value: DiaBP, count:1},
-            Pulse: {value: Pulse, count:1},
-            SPO2:  {value: SPO2, count:1}
+        var count1=1, count2=1, count3=1, count4=1;
+        if(isNaN(SysBP))
+            count1 = 0;
+        if(isNaN(DiaBP))
+            count2 = 0;
+        if(isNaN(Pulse))
+            count3 = 0;
+        if(isNaN(SPO2))
+            count4 = 0;
+        
+            var obj = {
+            SysBP: {value: SysBP, count:count1},
+            DiaBP: {value: DiaBP, count:count2},
+            Pulse: {value: Pulse, count:count3},
+            SPO2:  {value: SPO2, count:count4}
         }
 
         return obj;
