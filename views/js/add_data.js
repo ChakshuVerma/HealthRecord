@@ -126,8 +126,43 @@ function returnDataObject(SysBP,DiaBP,Pulse,SPO2,today) {
             retrievedObject.SPO2.value = parseFloat(retrievedObject.SPO2.value) + parseFloat(SPO2);
             retrievedObject.SPO2.count ++;
         }
-        
-
         return retrievedObject;
+    }
+}
+
+function deletetodaydata() {
+
+    let msg = document.getElementById('msg')
+    var today = new Date();
+    var dd = String(today.getDate()).padStart(2, '0');
+    var mm = String(today.getMonth() + 1).padStart(2, '0');
+    today = String(dd) + '/' + String(mm);
+    
+    if (localStorage.getItem(today) === null) {
+        msg.innerHTML = "No Readings Were Entered Today";
+        msg.className = 'alert alert-warning'
+        msg.style.display = 'block'
+        setTimeout(() => {
+            msg.style.display = 'none'
+        },2000)
+    }
+    else{
+        var response  = confirm(`Are you sure you want to delete today's data
+Note: The deleted data cannot be recovered`)
+
+        if(response === false)
+        {
+            msg.innerHTML = "Operation Cancelled";
+            msg.className = 'alert alert-success'
+        }
+        else{
+            localStorage.removeItem(today);
+            msg.innerHTML = "Today's Data Deleted";
+            msg.className = 'alert alert-success'
+        }
+        msg.style.display = 'block'
+        setTimeout(() => {
+            msg.style.display = 'none'
+        },2000)
     }
 }
