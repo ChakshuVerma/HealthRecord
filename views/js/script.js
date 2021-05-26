@@ -98,6 +98,7 @@ function showdata(event) {
             for(let x = 0; x< databuttons.length; x++){
                 databuttons[x].style.fontSize =  '4vw';
                 databuttons[x].style.width = '35vw';
+                databuttons[x].style.margin = '3vw'
             }
         }
 

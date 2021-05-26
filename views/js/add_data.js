@@ -201,6 +201,10 @@ Note: The deleted data cannot be recovered`)
         {
             msg.innerHTML = "Operation Cancelled";
             msg.className = 'alert alert-success'
+            msg.style.display = 'block'
+            setTimeout(() => {
+                msg.style.display = 'none'
+            },2000)
         }
         else{
             tempDataArray.pop();
@@ -208,10 +212,11 @@ Note: The deleted data cannot be recovered`)
             localStorage.setItem('DataArray', tempDataString);  
             msg.innerHTML = "Today's Data Deleted";
             msg.className = 'alert alert-success'
+            msg.style.display = 'block'
+            setTimeout(() => {
+                msg.style.display = 'none'
+            },2000)
         }
-        msg.style.display = 'block'
-        setTimeout(() => {
-            msg.style.display = 'none'
-        },2000)
+       
     }
 }

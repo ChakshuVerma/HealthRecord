@@ -24,6 +24,13 @@ body {
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
+    overflow: scroll;
+}
+
+.footer-bar {
+    position: fixed;
+    bottom: 0px;
+    width: 100vw;
 }
 
 #msg {
@@ -74,11 +81,6 @@ body {
     width: auto;
 }
 
-.navbar-buttons {
-    display: flex;
-    justify-content: space-around;
-}
-
 .navbar-buttons a,button{
     background-color: white;
     margin-right: 3px;
@@ -90,8 +92,12 @@ body {
 }
 
 @media (orientation: portrait) {
+    .container {
+        padding-bottom: 2vh;
+    }
     .navbar{
-        height: 10vh;
+        min-height: 8vh;
+        padding: 1vh;
     }
     .logo a{
         font-size: x-large;
@@ -99,8 +105,8 @@ body {
     .navbar-buttons a{
         font-size: 4vw;
     }
-    .navbar-buttons button{
-        font-size: 4vw;
+    .footer-bar button{
+        font-size: 5vw;
     }
     .buttons button{
         font-size: 5vw;
