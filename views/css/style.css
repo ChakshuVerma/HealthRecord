@@ -16,15 +16,13 @@ body {
 }
 
 .container {
-    padding-top: 10vh;
-    height: auto;
-    min-height: 100vh;
+    height: 80vh;
     width: 100vw;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-    overflow: scroll;
+    overflow: auto;
 }
 
 .footer-bar {
@@ -94,6 +92,7 @@ body {
 @media (orientation: portrait) {
     .container {
         padding-bottom: 2vh;
+        height: 85vh;
     }
     .navbar{
         min-height: 8vh;

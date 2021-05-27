@@ -1,0 +1,78 @@
+* {
+    box-sizing: border-box;
+    font-size: 1.2vw;
+}
+
+body {
+    margin: 0;
+    top: 0;
+    bottom: 0;
+}
+
+.logo a{
+    font-size: x-large;
+    color: black;
+    text-decoration: none;
+}
+
+.container {
+    padding-top: 10vh;
+    padding-bottom: 5vh;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    overflow: auto;
+}
+
+#health-image {
+    height: 40vh;
+}
+
+.container div{
+    width: auto;
+}
+
+.buttons-container {
+    margin: 10vh;
+    height: 30vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.buttons-container a {
+    font-size: xx-large;
+}
+
+.navbar {
+    z-index: 1;
+    top: 0;
+    width: 100%;
+    border-bottom: solid 2px black;
+    display: flex;
+    justify-content: space-between;
+    background-color: lightcyan;
+}
+
+@media (orientation: portrait) {
+    .container{
+        flex-direction: column;
+        align-items: center;
+    }
+    .navbar{
+        min-height: 8vh;
+        padding: 1vh;
+    }
+    
+    .buttons-container{
+        margin: 0;
+        justify-content: space-around;
+    }
+
+    #health-image{
+        height: 35vh;
+    }
+}

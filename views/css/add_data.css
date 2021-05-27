@@ -62,10 +62,20 @@ body {
     margin-right: 3px;
 }
 
+.footer-bar {
+    position: fixed;
+    bottom: 0px;
+    width: 100vw;
+}
 
 @media (orientation: portrait) {
+    .container {
+        padding-bottom: 2vh;
+        height: 85vh;
+    }
     .navbar{
-        height: 10vh;
+        min-height: 8vh;
+        padding: 1vh;
     }
     .logo a{
         font-size: x-large;
@@ -78,6 +88,9 @@ body {
     }
     .navbar-buttons button{
         font-size: 4vw;
+    }
+    .footer-bar button{
+        font-size: 5vw;
     }
     .add_data input{
         font-size: 4vw;
