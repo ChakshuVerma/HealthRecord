@@ -23,6 +23,7 @@ function adddata(event) {
             },2000)
     }
     else{
+
         if(SysBP == '')
             SysBP = NaN;
         if(DiaBP == '')
@@ -31,45 +32,55 @@ function adddata(event) {
             Pulse = NaN;
         if(SPO2 == '')
             SPO2 = NaN;
-        
-        if(isNaN(SysBP) && isNaN(DiaBP) && isNaN(Pulse) && isNaN(SPO2)) {
-            msg.innerHTML = 'Add atleast one reading';
-            msg.className = 'alert alert-warning'
-            msg.style.display = 'block'
-            setTimeout(() => {
-                msg.style.display = 'none'
-            },2000)
+
+        if((isNaN(SysBP) && !isNaN(DiaBP)) || (isNaN(DiaBP) && !isNaN(SysBP))){
+                msg.innerHTML = 'Please Enter Both BP Readings';
+                msg.className = 'alert alert-warning'
+                msg.style.display = 'block'
+                setTimeout(() => {
+                    msg.style.display = 'none'
+                },2000)
         }
         else{
-            if(((SysBP<115 || SysBP>139) && SysBP!=NaN) || ((DiaBP<75 || DiaBP>95)&& DiaBP!=NaN) || ((Pulse<57 || Pulse>105) && Pulse!=NaN) || ((SPO2<92 || SPO2>100) && SPO2!=NaN)){
-                msg.className = 'alert alert-danger'
-                msg.innerHTML = 'Your Readings Are Extreme. You Should Visit A Hospital Immediately'
+            if(isNaN(SysBP) && isNaN(DiaBP) && isNaN(Pulse) && isNaN(SPO2)) {
+                msg.innerHTML = 'Add atleast one reading';
+                msg.className = 'alert alert-warning'
                 msg.style.display = 'block'
+                setTimeout(() => {
+                    msg.style.display = 'none'
+                },2000)
             }
             else{
-                var today = new Date();
-                var dd = String(today.getDate()).padStart(2, '0');
-                var mm = String(today.getMonth() + 1).padStart(2, '0');
-                today = String(dd) + '/' + String(mm);
-            
-                var returnedArray = returnDataObject(SysBP,DiaBP,Pulse,SPO2,today);
-                var obj = returnedArray[0];
-                var pushNewObject = returnedArray[1];
+                if(((SysBP<115 || SysBP>139) && SysBP!=NaN) || ((DiaBP<70 || DiaBP>95)&& DiaBP!=NaN) || ((Pulse<57 || Pulse>105) && Pulse!=NaN) || ((SPO2<92 || SPO2>100) && SPO2!=NaN)){
+                    msg.className = 'alert alert-danger'
+                    msg.innerHTML = 'Your Readings are out of the normal range'
+                    msg.style.display = 'block'
+                }
+                else{
+                    var today = new Date();
+                    var dd = String(today.getDate()).padStart(2, '0');
+                    var mm = String(today.getMonth() + 1).padStart(2, '0');
+                    today = String(dd) + '/' + String(mm);
+                
+                    var returnedArray = returnDataObject(SysBP,DiaBP,Pulse,SPO2,today);
+                    var obj = returnedArray[0];
+                    var pushNewObject = returnedArray[1];
 
-                addToLocalStorage(obj, pushNewObject);
-            
-                msg.className = 'alert alert-success'
-                msg.innerHTML = 'Readings Added'
-                msg.style.display = 'block'
+                    addToLocalStorage(obj, pushNewObject);
+                
+                    msg.className = 'alert alert-success'
+                    msg.innerHTML = 'Readings Added'
+                    msg.style.display = 'block'
 
-                document.getElementById('BP-1').value = ''
-                document.getElementById('BP-2').value = ''
-                document.getElementById('Pulse').value = ''
-                document.getElementById('SPO2').value = ''
+                    document.getElementById('BP-1').value = ''
+                    document.getElementById('BP-2').value = ''
+                    document.getElementById('Pulse').value = ''
+                    document.getElementById('SPO2').value = ''
+                }
+                setTimeout(() => {
+                    msg.style.display = 'none'
+                },2000)
             }
-            setTimeout(() => {
-                msg.style.display = 'none'
-            },2000)
         }
     }
 }

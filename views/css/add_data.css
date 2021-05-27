@@ -8,16 +8,15 @@ body {
     top: 0;
     bottom: 0;
 }
-
+ 
 .container {
-    padding-top: 10vh;
-    height: auto;
-    min-height: 90vh;
+    height: 86vh;
     width: 100vw;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
+    overflow: auto;
 }
 
 #msg {
@@ -33,9 +32,21 @@ body {
     text-decoration: none;
 }
 
+.input-box{
+    width: 60vw;
+}
+
+.input-box input{
+    font-size: 3vh;
+}
+
+.input-button button{
+    font-size: 4vh;
+}
+
 .navbar {
     top: 0;
-    position: fixed;
+    position: sticky;
     width: 100vw;
     background-color: lightcyan;
     border-bottom: solid 2px black;
@@ -44,11 +55,13 @@ body {
 }
 
 .navbar div:nth-child(1){
-    font-weight: 800;
+    padding-left: 2vw;
+    font-weight: 600;
     max-width: 80%;
 }
 
 .navbar div:nth-child(2){
+    padding-right: 2vw;
     width: auto;
 }
 
@@ -63,15 +76,21 @@ body {
 }
 
 .footer-bar {
-    position: fixed;
+    position: sticky;
     bottom: 0px;
     width: 100vw;
+}
+
+.footer-bar button{
+    width: 100%;
+    font-size: x-large;
+    border-radius: 0%;
 }
 
 @media (orientation: portrait) {
     .container {
         padding-bottom: 2vh;
-        height: 85vh;
+        height: 86.1vh;
     }
     .navbar{
         min-height: 8vh;
@@ -88,9 +107,6 @@ body {
     }
     .navbar-buttons button{
         font-size: 4vw;
-    }
-    .footer-bar button{
-        font-size: x-large;
     }
     .add_data input{
         font-size: 4vw;

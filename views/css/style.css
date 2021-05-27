@@ -16,7 +16,7 @@ body {
 }
 
 .container {
-    height: 80vh;
+    height: 85.4vh;
     width: 100vw;
     display: flex;
     flex-direction: column;
@@ -29,6 +29,12 @@ body {
     position: fixed;
     bottom: 0px;
     width: 100vw;
+}
+
+.footer-bar button{
+    width: 100%;
+    font-size: x-large;
+    border-radius: 0%;
 }
 
 #msg {
@@ -62,7 +68,7 @@ body {
 }
 
 .navbar {
-    z-index: 1;
+    position: sticky;
     top: 0;
     width: 100%;
     border-bottom: solid 2px black;
@@ -72,10 +78,13 @@ body {
 }
 
 .navbar div:nth-child(1){
+    padding-left: 2vw;
+    font-weight: 600;
     max-width: 80%;
 }
 
 .navbar div:nth-child(2){
+    padding-right: 2vw;
     width: auto;
 }
 
@@ -92,7 +101,7 @@ body {
 @media (orientation: portrait) {
     .container {
         padding-bottom: 2vh;
-        height: 85vh;
+        height: 85.9vh;
     }
     .navbar{
         min-height: 8vh;
@@ -103,9 +112,6 @@ body {
     }
     .navbar-buttons a{
         font-size: 4vw;
-    }
-    .footer-bar button{
-        font-size: x-large;
     }
     .buttons button{
         font-size: 5vw;
