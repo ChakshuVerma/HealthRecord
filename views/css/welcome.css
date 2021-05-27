@@ -66,13 +66,12 @@ body {
         min-height: 8vh;
         padding: 1vh;
     }
-    
     .buttons-container{
         margin: 0;
         justify-content: space-around;
     }
 
     #health-image{
-        height: 35vh;
+        height: 28vh;
     }
 }
