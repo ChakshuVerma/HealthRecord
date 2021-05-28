@@ -45,7 +45,6 @@ body {
 
 .input-box{
     width: 40vh;
-    /* background-color: khaki; */
 }
 
 .input-box input{
@@ -78,11 +77,11 @@ body {
 }
 
 .footer-bar {
+    height: 7vh;
     width: 100vw;
 }
 
 .footer-bar button{
-    height: 7vh;
     width: 100%;
     font-size: 4vh;
     border-radius: 0%;
