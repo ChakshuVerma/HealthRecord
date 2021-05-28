@@ -87,6 +87,13 @@ body {
     border-radius: 0%;
 }
 
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+
 @media (orientation: portrait) {
     .container {
         padding-bottom: 2vh;
