@@ -1,7 +1,6 @@
 * {
     box-sizing: border-box;
     font-size: 1.2vw;
-    /* outline: 1px solid red; */
     margin: 0;
 }
 
@@ -26,6 +25,7 @@ body {
 
 .container {
     height: 92vh;
+    max-height: 92vh;
     width: 100vw;
     display: flex;
     flex-wrap: wrap;
