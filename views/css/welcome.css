@@ -60,14 +60,13 @@ body {
         max-height: 92vh;
         flex-direction: column;
         align-items: center;
-        /* background-color: burlywood; */
+        overflow: none;
     }
     .navbar{
         height: 8vh;
         padding: 1vh;
     }
     .buttons-container{
-        /* margin: 0; */
         justify-content: space-around;
     }
     .buttons-container a {
