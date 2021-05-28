@@ -84,7 +84,7 @@ body {
 
 .navbar div:nth-child(1){
     padding-left: 2vw;
-    font-weight: 600;
+    font-weight: 500;
     max-width: 80%;
 }
 
@@ -107,6 +107,9 @@ body {
         font-size: 2.5vh;
         padding-left: 3vw;
         padding-right: 3vw;
+    }
+    .logo a{
+        font-size: 3vh;
     }
     .buttons button{
         font-size: 4.7vh;
