@@ -81,7 +81,7 @@ body {
 .footer-bar button{
     height: 7vh;
     width: 100%;
-    font-size: x-large;
+    font-size: 4vh;
     border-radius: 0%;
 }
 
@@ -93,13 +93,6 @@ input::-webkit-inner-spin-button {
 
 
 @media (orientation: portrait) {
-    .container {
-        padding-bottom: 2vh;
-        height: 85vh;
-    }
-    .logo a{
-        font-size: 4vh;
-    }
     .navbar-buttons a{
         font-size: 3vh;
         padding-left: 3vw;
