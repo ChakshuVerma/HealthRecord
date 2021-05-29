@@ -23,8 +23,8 @@ body {
 
 
 .container {
-    height: 85vh;
-    max-height: 85vh;
+    height: 80vh;
+    max-height: 80vh;
     width: 100vw;
     display: flex;
     flex-direction: column;
