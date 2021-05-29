@@ -110,6 +110,9 @@ input::-webkit-inner-spin-button {
         padding-right: 3vw;
         margin-right: 2vw;
     }
+    .logo a{
+        font-size: 3vh;
+    }
     .add_data input{
         font-size: 2.5vh;
         margin-bottom: 1vh;
