@@ -33,6 +33,7 @@ body {
     overflow: auto;
     padding-top: 4vh;
     padding-bottom: 2vh;
+    overflow: auto;
 }
 
 #msg {
