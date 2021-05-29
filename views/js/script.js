@@ -87,7 +87,7 @@ function showdata(event) {
         },3000)
     }
     else{
-        document.querySelector('container').style.overflow = 'scroll'
+        document.querySelector('.container').style.overflow = 'auto'
         var button_id = event.target.id;
         var dataset = [], labels = [];
         var LineColor,data; 

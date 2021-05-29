@@ -10,13 +10,30 @@ body {
     overflow: hidden;
 }
 
+.logo {
+    padding-left: 2vw;
+    font-weight: 500;
+    max-width: 80%;
+    padding-top: 0.5vh;
+    padding-bottom: 0.5vh;
+    display: flex;
+    align-items: center;
+}
+
 .logo a{
     font-size: 4vh;
     color: black;
     text-decoration: none;
 }
 
+.logo img{
+    height: 5vh;
+    width: 9vh;
+    margin-right: 2vh;
+}
+
 .container {
+    padding-top: 4vh;
     height: 85.4vh;
     max-height: 85.4vh;
     width: 100vw;
@@ -24,7 +41,7 @@ body {
     flex-direction: column ;
     justify-content: space-evenly;
     align-items: center;
-    padding-bottom: 3vh;
+    padding-bottom: 2vh;
 }
 
 .footer-bar {
@@ -72,28 +89,28 @@ body {
 }
 
 .navbar {
+    padding-top: 0.5vh;
+    padding-bottom: 0.5vh;
     position: sticky;
     top: 0;
     height: 8vh;
     width: 100%;
     border-bottom: solid 2px black;
     display: flex;
-    justify-content: space-between;
     background-color: lightcyan;
 }
 
-.navbar div:nth-child(1){
-    padding-left: 2vw;
-    font-weight: 500;
-    max-width: 80%;
+.navbar-buttons{
+    padding-top: 0.5vh;
+    padding-bottom: 0.5vh;   
+    display: flex;
+    align-items: center;
+    margin-right: 4vw;
+    width: auto; 
 }
 
-.navbar div:nth-child(2){
-    padding-right: 4vw;
-    width: auto;
-}
-
-.navbar-buttons a,button{
+.navbar-buttons a{
+    font-size: 2vh;
     background-color: white;
 }
 

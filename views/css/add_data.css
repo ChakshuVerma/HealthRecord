@@ -11,6 +11,8 @@ body {
 }
 
 .navbar {
+    padding-top: 0.5vh;
+    padding-bottom: 0.5vh;
     height: 8vh;
     width: 100vw;
     background-color: lightcyan;
@@ -26,8 +28,11 @@ body {
     width: 100vw;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
+    overflow: auto;
+    padding-top: 4vh;
+    padding-bottom: 2vh;
 }
 
 #msg {
@@ -35,6 +40,25 @@ body {
     top: 15vh;
     position: fixed;
     z-index: 1;
+}
+
+.logo {
+    padding-left: 2vw;
+    font-weight: 500;
+    max-width: 80%;
+    padding-top: 0.5vh;
+    padding-bottom: 0.5vh;
+    display: flex;
+    align-items: center;
+}
+
+.navbar-buttons{
+    padding-right: 2vw;
+    width: auto;
+    display: flex;
+    align-items: center;
+    padding-top: 0.5vh;
+    padding-bottom: 0.5vh;
 }
 
 .logo a{
@@ -56,29 +80,20 @@ body {
     font-size: 4vh;
 }
 
-.navbar div:nth-child(1){
-    padding-left: 2vw;
-    font-weight: 500;
-    max-width: 80%;
-}
-
-.navbar div:nth-child(2){
-    padding-right: 2vw;
-    width: auto;
-}
-
-.navbar-buttons {
-    display: flex;
-    justify-content: space-around;
-}
-
 .navbar-buttons a{
+    font-size: 2vh;
     background-color: white;
 }
 
 .footer-bar {
     height: 7vh;
     width: 100vw;
+}
+
+.logo img{
+    height: 5vh;
+    width: 9vh;
+    margin-right: 2vh;
 }
 
 .footer-bar button{
