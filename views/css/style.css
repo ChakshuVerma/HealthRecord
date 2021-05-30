@@ -36,6 +36,18 @@ body {
     justify-content: space-evenly;
     align-items: center;
     padding-bottom: 2vh;
+    animation: transitionIn 1s;    
+}
+
+@keyframes transitionIn {
+    from {
+        opacity: 0;
+        transform: rotateX(-100);
+    }
+    to {
+        opacity: 1;
+        transform: rotateX(0);
+    }
 }
 
 .footer-bar {
@@ -54,6 +66,7 @@ body {
     display: none;
     position: fixed;
     z-index: 1;
+    animation: transitionIn 0.5s;    
 }
 
 .canvas-container{
