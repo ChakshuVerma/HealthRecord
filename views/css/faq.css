@@ -52,6 +52,7 @@ body {
     margin: 0 auto;
     margin-top: 10vh;
     animation: transitionIn 2s;
+    overflow: auto;
 }
 
 .container-fluid h2{
