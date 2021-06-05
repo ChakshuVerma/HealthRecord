@@ -39,6 +39,16 @@ body {
     background-color: lightcyan;
 }
 
+.faq{
+    position: relative;
+    right: 5vh;
+}
+
+.faq a{
+    color: black;
+    text-decoration: none;
+}
+
 .container {
     height: 92vh;
     max-height: 92vh;
