@@ -41,7 +41,6 @@ body {
     padding-bottom: 0.5vh;
     height: 8vh;
     width: 100%;
-    position: fixed;
     border-bottom: solid 2px black;
     background-color: lightcyan;
 }
@@ -53,7 +52,6 @@ body {
     margin-top: 10vh;
     animation: transitionIn 2s;
     overflow: auto;
-    padding-top: 5vh;
     padding-bottom: 2vh;
 }
 
