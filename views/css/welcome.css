@@ -103,12 +103,15 @@ body {
     .logo a{
         font-size: 3vh;
     }
+    .faq {
+        right: 3vh;
+    }
     .navbar{
         height: 8vh;
         padding: 1vh;
     }
     .buttons-container{
-        justify-content: space-around;
+        justify-content: space-evenly;
     }
     .buttons-container a {
         font-size: 4vh;

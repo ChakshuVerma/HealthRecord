@@ -30,10 +30,8 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    overflow: auto;
     padding-top: 4vh;
     padding-bottom: 2vh;
-    overflow: auto;
     animation: transitionIn 1s;    
 }
 
