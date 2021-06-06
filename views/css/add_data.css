@@ -7,6 +7,7 @@ body {
     margin: 0;
     top: 0;
     bottom: 0;
+    overflow: auto;
 }
 
 .navbar {
@@ -22,8 +23,8 @@ body {
 
 
 .container {
-    height: 85vh;
-    max-height: 85vh;
+    height: 84vh;
+    max-height: 84vh;
     width: 100vw;
     display: flex;
     flex-direction: column;
@@ -135,5 +136,9 @@ input::-webkit-inner-spin-button {
     }
     #msg {
         font-size: 3vh;
+    }
+    .container{
+        max-height: 84.9vh;
+        height: 84.9vh;
     }
 }

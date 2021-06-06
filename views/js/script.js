@@ -111,11 +111,13 @@ function showdata(event) {
 
             for(var i=1; i<tempDataArray.length; i++){
                 var obj = tempDataArray[i];
-                labels.push(obj.date)
                 var SysBP = findaverage(obj.SysBP);
-                dataset.push(SysBP);
                 var DiaBP = findaverage(obj.DiaBP);
-                dataset2.push(DiaBP);
+                if(!isNaN(SysBP) || !isNaN(DiaBP)){
+                    labels.push(obj.date)
+                    dataset.push(SysBP);
+                    dataset2.push(DiaBP);
+                }
             }
 
             var label = 'Systolic BP',
@@ -136,9 +138,11 @@ function showdata(event) {
             max = 100;
             for(var i=1; i<tempDataArray.length; i++){
                 var obj = tempDataArray[i];
-                labels.push(obj.date)
                 var SPO2 = findaverage(obj.SPO2);
-                dataset.push(SPO2);
+                if(!isNaN(SPO2)){
+                    labels.push(obj.date)
+                    dataset.push(SPO2);
+                }
             }
 
             var label = 'SPO2'
@@ -155,9 +159,11 @@ function showdata(event) {
             max = 100;
             for(var i=1; i<tempDataArray.length; i++){
                 var obj = tempDataArray[i];
-                labels.push(obj.date)
                 var Pulse = findaverage(obj.Pulse);
-                dataset.push(Pulse);
+                if(!isNaN(Pulse)){
+                    labels.push(obj.date)
+                    dataset.push(Pulse);
+                }
             }
 
             var label = 'Pulse'
@@ -175,15 +181,17 @@ function showdata(event) {
             var dataset2 = [], dataset3 = [], dataset4 = [];
            for(var i=1; i<tempDataArray.length; i++){
                 var obj = tempDataArray[i];
-                labels.push(obj.date)
                 var SysBP = findaverage(obj.SysBP);
                 var DiaBP = findaverage(obj.DiaBP);
                 var Pulse = findaverage(obj.Pulse);
                 var SPO2 = findaverage(obj.SPO2);
-                dataset.push(SysBP);
-                dataset2.push(DiaBP);
-                dataset3.push(SPO2);
-                dataset4.push(Pulse);
+                if(!isNaN(SysBP) || !isNaN(DiaBP) || !isNaN(Pulse) || !isNaN(SPO2)){
+                    labels.push(obj.date)
+                    dataset.push(SysBP);
+                    dataset2.push(DiaBP);
+                    dataset3.push(SPO2);
+                    dataset4.push(Pulse);
+                }
             }
 
             var label1 = 'Systolic BP', label2 = 'Diastolic BP', label3 = 'SPO2', label4 = 'Pulse';
