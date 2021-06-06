@@ -19,7 +19,7 @@ setchartdata = (dataset,LineColor,label) =>{
 
 
 // Chart Settings
-setchartsettings = (data) => {
+setchartsettings = (data, min, max) => {
     myChart = new Chart(ctx,{
         type: 'line',
         data: data, 
@@ -55,7 +55,8 @@ setchartsettings = (data) => {
                             size: 20
                         }
                     },
-                    suggestedMin: 0,
+                    suggestedMin: min,
+                    suggestedMax: max,
                 }
             },
             elements: {
@@ -90,7 +91,7 @@ function showdata(event) {
         document.querySelector('.container').style.overflow = 'auto'
         var button_id = event.target.id;
         var dataset = [], labels = [];
-        var LineColor,data; 
+        var LineColor,data,min,max; 
         let tempDataString = localStorage.getItem('DataArray');
         let tempDataArray = JSON.parse(tempDataString);
 
@@ -104,6 +105,8 @@ function showdata(event) {
         }
 
         if(button_id == 'button-Bp'){
+            min = 60;
+            max = 140;
             var dataset2 = [];
 
             for(var i=1; i<tempDataArray.length; i++){
@@ -129,6 +132,8 @@ function showdata(event) {
             }
         }
         else if(button_id == 'button-SPO2'){
+            min = 80;
+            max = 100;
             for(var i=1; i<tempDataArray.length; i++){
                 var obj = tempDataArray[i];
                 labels.push(obj.date)
@@ -146,6 +151,8 @@ function showdata(event) {
             } 
         }
         else if(button_id == 'button-Pulse'){
+            min = 50;
+            max = 100;
             for(var i=1; i<tempDataArray.length; i++){
                 var obj = tempDataArray[i];
                 labels.push(obj.date)
@@ -163,6 +170,8 @@ function showdata(event) {
             }
         }
         else{
+            min = 50;
+            max = 100;
             var dataset2 = [], dataset3 = [], dataset4 = [];
            for(var i=1; i<tempDataArray.length; i++){
                 var obj = tempDataArray[i];
@@ -195,7 +204,7 @@ function showdata(event) {
             myChart.destroy();
         
         document.querySelector('.canvas-container').style.display = 'flex';
-        setchartsettings(data);
+        setchartsettings(data, min, max);
         myChart.update();
     }
 }
