@@ -2,13 +2,15 @@
     box-sizing: border-box;
     font-size: 1.2vw;
 }
+html {
+    scroll-behavior: smooth;
+}
 
 body {
     margin: 0;
     top: 0;
     bottom: 0;
     overflow: auto;
-    min-height: -webkit-fill-available;
 }
 
 .navbar {
