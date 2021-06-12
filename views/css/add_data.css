@@ -10,9 +10,7 @@ body {
 }
 
 html {
-    
-    height: 100%;
-    min-height: 100%;
+    overflow: auto;
 }
 
 .navbar {
@@ -120,7 +118,7 @@ input::-webkit-inner-spin-button {
 }
 
 
-@media (orientation: portrait) {
+@media (pointer:none),(pointer:coarse)and(orientation: portrait) {
     .navbar-buttons a{
         font-size: 3vh;
         padding-left: 3vw;
