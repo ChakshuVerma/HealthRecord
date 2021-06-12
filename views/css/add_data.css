@@ -9,10 +9,6 @@ body {
     bottom: 0;
 }
 
-html {
-    overflow: auto;
-}
-
 .navbar {
     padding-top: 0.5vh;
     padding-bottom: 0.5vh;
@@ -26,8 +22,7 @@ html {
 
 
 .container {
-    height: 84vh;
-    max-height: 84vh;
+    height: 84.15vh;
     width: 100vw;
     display: flex;
     flex-direction: column;
@@ -82,7 +77,13 @@ html {
     text-decoration: none;
 }
 
+.navbar-buttons a{
+    font-size: 2vh;
+    background-color: white;
+}
+
 .input-box{
+    position: relative;
     width: 40vh;
 }
 
@@ -93,11 +94,6 @@ html {
 
 .input-button button{
     font-size: 4vh;
-}
-
-.navbar-buttons a{
-    font-size: 2vh;
-    background-color: white;
 }
 
 .footer-bar {
@@ -118,7 +114,60 @@ input::-webkit-inner-spin-button {
 }
 
 
-@media (pointer:none),(pointer:coarse)and(orientation: portrait) {
+@media (orientation: portrait) {
+    .navbar {
+        padding-top: 0.5vw;
+        padding-bottom: 0.5vw;
+        height: 10vw;
+    }
+    .container {
+        height: 102.3vw;
+        padding-top: 4vw;
+        padding-bottom: 4vw;
+    }
+    #msg {
+        font-size: 3vh;
+    }
+    .logo {
+        padding-left: 2vw;
+        font-weight: 500;
+        max-width: 80%;
+        padding-top: 0.5vw;
+        padding-bottom: 0.5vw;
+    }
+    .navbar-buttons{
+        padding-top: 0.5vw;
+        padding-bottom: 0.5vw;
+    }
+    .logo a{
+        font-size: 4vw;
+    }
+    .navbar-buttons a{
+        font-size: 3.5vw;
+    }
+    .input-box{
+        width: 58vw;
+        padding-bottom: 2vw;
+    }
+    .input-box input{
+        font-size: 3vw;
+    }
+    .input-button button{
+        margin-top: 4vw;
+        font-size: 5vw;
+    }
+    .footer-bar {
+        height: 7vw;
+        width: 100vw;
+    }
+    .footer-bar button{
+        font-size: 4.8vw;
+        border-radius: 0%;
+    }
+}
+
+/* 
+@media (orientation: portrait) {
     .navbar-buttons a{
         font-size: 3vh;
         padding-left: 3vw;
@@ -144,4 +193,4 @@ input::-webkit-inner-spin-button {
         max-height: 84.9vh;
         height: 84.9vh;
     }
-}
+} */
