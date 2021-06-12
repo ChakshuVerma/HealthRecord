@@ -113,7 +113,7 @@ input::-webkit-inner-spin-button {
   margin: 0;
 }
 
-
+/* 
 @media (orientation: portrait) {
     .navbar {
         padding-top: 0.5vw;
@@ -142,31 +142,31 @@ input::-webkit-inner-spin-button {
     .logo a{
         font-size: 4vw;
     }
-    .navbar-buttons a{
+    /* .navbar-buttons a{
         font-size: 3.5vw;
-    }
-    .input-box{
-        width: 58vw;
-        padding-bottom: 2vw;
-    }
-    .input-box input{
+    } */
+    /* .input-box{
+        width: 58vw; */
+        /* padding-bottom: 2vw; */
+    /* } */
+    /* .input-box input{
         font-size: 3vw;
-    }
-    .input-button button{
-        margin-top: 4vw;
-        font-size: 5vw;
-    }
-    .footer-bar {
+    } */
+    /* .input-button button{
+        margin-top: 5vw; */
+        /* font-size: 5vw; */
+    /* } */
+    /* .footer-bar {
         height: 7vw;
         width: 100vw;
     }
     .footer-bar button{
         font-size: 4.8vw;
         border-radius: 0%;
-    }
-}
+    } */
+/* }  */
 
-/* 
+
 @media (orientation: portrait) {
     .navbar-buttons a{
         font-size: 3vh;
@@ -193,4 +193,10 @@ input::-webkit-inner-spin-button {
         max-height: 84.9vh;
         height: 84.9vh;
     }
-} */
+    .input-box{
+        width: 58vw;
+    }
+    .input-button button{
+        margin-top: 5vw;
+    }
+}
