@@ -51,7 +51,7 @@ function adddata(event) {
                 },2000)
             }
             else{
-                if(((SysBP<115 || SysBP>139) && SysBP!=NaN) || ((DiaBP<70 || DiaBP>95)&& DiaBP!=NaN) || ((Pulse<57 || Pulse>105) && Pulse!=NaN) || ((SPO2<92 || SPO2>100) && SPO2!=NaN)){
+                if(((SysBP<110 || SysBP>139) && SysBP!=NaN) || ((DiaBP<70 || DiaBP>95)&& DiaBP!=NaN) || ((Pulse<57 || Pulse>105) && Pulse!=NaN) || ((SPO2<92 || SPO2>100) && SPO2!=NaN)){
                     msg.className = 'alert alert-danger'
                     msg.innerHTML = 'Your Readings are out of the normal range'
                     msg.style.display = 'block'
